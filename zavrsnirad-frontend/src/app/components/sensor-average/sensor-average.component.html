@@ -1,0 +1,43 @@
+<div *ngIf="loading">Učitavanje podataka...</div>
+<div *ngIf="errorMessage" class="error-text">{{ errorMessage }}</div>
+
+<div *ngIf="!loading && !errorMessage">
+  <div *ngFor="let data of sensorAverageData" class="data-box"> 
+    <div class="date">
+        <span class="day">{{ data.day}}</span>
+    </div>
+
+    
+
+    <div class="daily-averages">
+        <div class="avg-item">
+            <span class="avg-label">Temperatura (°C)</span>
+            <div class="value-range">
+                <span class="min-value">{{ data.minTemperature }}°</span>
+                <span class="avg-value">{{ data.avgTemperature }}°</span>
+                <span class="max-value">{{ data.maxTemperature }}°</span>
+            </div>
+            <div class="range-labels">
+                <span class="range-label">Min</span>
+                <span class="range-label">Prosj</span>
+                <span class="range-label">Max</span>
+            </div>
+        </div>
+        <div class="avg-item">
+            <span class="avg-label">Vlaga (%)</span>
+            <div class="value-range">
+                <span class="min-value">{{ data.minHumidity }}%</span>
+                <span class="avg-value">{{ data.avgHumidity }}%</span>
+                <span class="max-value">{{ data.maxHumidity }}%</span>
+            </div>
+            <div class="range-labels">
+                <span class="range-label">Min</span>
+                <span class="range-label">Prosj</span>
+                <span class="range-label">Max</span>
+            </div>
+        </div>
+    </div>
+
+
+  </div>
+</div>
