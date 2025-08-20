@@ -1,9 +1,0 @@
-/* You can add global styles to this file, and also import other style files */
-body {
-    background-image: url('assets/background.jpg');
-    /*background-color: #384959;*/
-    background-size: cover;
-    background-attachment: fixed;
-    margin: 0;
-
-}
