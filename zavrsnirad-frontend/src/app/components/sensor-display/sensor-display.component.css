@@ -1,0 +1,104 @@
+.sensor-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* centriraj horizontalno */
+  justify-content: flex-start; /* počinje od vrha */
+  min-height: auto;           /* ukloni visinu koja stvara prazan prostor */
+  padding: 20px 0;           /* samo malo padding odozgo */
+  text-align: center;
+}
+
+.loading-text {
+  color: blue;
+  font-weight: bold;
+}
+
+.error-text {
+  color: red;
+  font-weight: bold;
+}
+
+.data-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 100%;
+}
+
+.temperature-card {
+  /*background: #88bdf2;*/
+  backdrop-filter: blur(10px); /* efekt stakla */
+  color: #fff;
+  
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 300px;
+  width: 100%;
+  border: 1.5px solid rgba(0, 0, 0, 10);
+  position: static; /* ukloni top i relative */
+  margin: 0;
+}
+
+
+.main-temp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.temperature {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: linear-gradient(135deg, #ffffff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.weather-icon {
+    font-size: 2.5rem;
+}
+
+.weather-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.detail-item {
+    /*background: rgb(255, 255, 255);*/
+    padding: 12px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+      border: 1.5px solid rgba(0, 0, 0, 10);
+}
+
+.label {
+    font-size: 0.8rem;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.value {
+    font-size: 1.1rem;
+    color: #fafafa;
+    font-weight: 600;
+}
+
+.last-updated {
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+
